@@ -42,6 +42,8 @@ a{
     display: flex;
     justify-content: flex-start;
 
+position: relative;
+
     overflow: scroll;
     
     /* hide scrollbar but allow scrolling */
@@ -53,7 +55,9 @@ a{
 .stories::-webkit-scrollbar{
     display: none; /* for Chrome, Safari, and Opera */
 }
-
+.setinha{
+    display: none;
+}
 ion-icon {
     margin: auto 5%;
     
@@ -74,8 +78,8 @@ ion-icon {
     height: 56px;
 }
 .avatar img{
-    width: 85%;
-    height: 85%;
+    width: 100%;
+    height: 100%;
 
     border-radius: 100%;
 }
@@ -321,6 +325,24 @@ ion-icon {
 
             
     }
+    .setinha{
+        display: initial;
+        position: absolute;
+        right: 0;
+        top: 30%;
+        
+        
+       
+        
+    }
+    .setinha ion-icon{
+        font-size: 26px;
+        color: lightgrey;
+        border-radius: 100%;
+        box-shadow: -10px 0px 5px black;
+        z-index: 5;
+        
+    }
     .fixa-side-bar{
         width: 293px;
         
@@ -366,7 +388,10 @@ ion-icon {
     .sugerido a{
         color: #0095f6;
     }
-    
+    .sugerido .avatar{
+        width: 32px;
+        height: 32px;
+    }
     .left-top{
         margin-left: 0;
     }
