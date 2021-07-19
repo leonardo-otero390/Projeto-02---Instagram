@@ -14,7 +14,18 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+button{
+    color: #B2DFFC;
+    background-color: inherit;
+    border: none;
+}
+button:hover{
+    color: #0095F6;
+    transition: 300ms;
+}
+input:focus {
+    outline: none;
+}
 .topo {
     display: none;
 }
@@ -135,7 +146,18 @@ a {
     font-size: 12px;
     margin-top: 8px;
 }
-
+.sugerido .user-name a:hover{
+    text-decoration: underline;
+}
+.post .top-bar a:hover {
+    text-decoration: underline;
+}
+.hover-under:hover{
+    text-decoration: underline;
+}
+.comments a strong:hover{
+    text-decoration: underline;
+}
 .post {
     background-color: #ffffff;
 
@@ -213,6 +235,56 @@ a {
 
     margin: auto 5px auto 0;
 }
+.comments{
+
+    margin: auto 8px;
+
+    font-size: 14px;
+}
+.comment{
+display: flex;
+
+position: relative;
+}
+.comment p{
+    max-width: 50%;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.comment .icon{
+    font-size: 14px;
+    margin: 0;
+
+    position: absolute;
+    right: 0;
+}
+.time{
+    font-size: 10px;
+    margin-bottom: 8px;
+}
+.comment-box{
+    height: 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid #DBDBDB;
+}
+.comment-box input {
+    width: calc(100% - 70px);
+    margin-left: 8px;
+    background: inherit;
+    border: none;
+}
+
+.comment-box input::placeholder {
+    text-align:start;
+}
+
 
 .feet-bar {
     display: flex;
@@ -329,10 +401,6 @@ a {
 
     input::placeholder {
         text-align: center;
-    }
-
-    input:focus {
-        outline: none;
     }
 
     input:focus::placeholder {
