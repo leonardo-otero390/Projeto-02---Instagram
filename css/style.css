@@ -4,7 +4,17 @@ body{
 strong{
     font-weight: bold;
 }
+em{
+    color: #8e8e8e;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
 .topo{
+    display: none;
+}
+.side-bar{
     display: none;
 }
 .topo-mobile {
@@ -59,16 +69,35 @@ ion-icon {
 
     margin: auto 2%;
 }
-
-.avatar {
+.avatar{
     width: 56px;
     height: 56px;
+}
+.avatar img{
+    width: 85%;
+    height: 85%;
+
+    border-radius: 100%;
+}
+
+.story .avatar {
+    
     background-image: url('/images/stories_background.jpg');
     background-size: 100% 100%;
     border-radius: 100%;
 
     margin-bottom: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.story .avatar img{
+    width: 85%;
+    height: 85%;
+}
+
+
 
 .user-name {
     font-size: 12px;
@@ -104,6 +133,7 @@ ion-icon {
     height: 32px;
     margin: 10px;
 }
+
 .container{
     width: 100vw;
     margin-top: 54px;
@@ -177,6 +207,21 @@ ion-icon {
     .topo-mobile{
         display: none;
     }
+
+    .top-container{
+        background-color: khaki;
+
+        width: 100vw;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        z-index: 1;
+
+        border: 1px solid #DBDBDB;
+    }
+   
     .topo{
 
     height: 54px;
@@ -184,7 +229,7 @@ ion-icon {
 
     background-color: #fff;
 
-    border: 1px solid #DBDBDB;
+    
 
     display: flex;
     justify-content: space-between;
@@ -209,13 +254,17 @@ ion-icon {
         margin-right: 16px;
     }
     .container{
+        margin-top: 88px;
+        margin-bottom: 0;
+    }
+    .conteudo{
       width: 614px;
-        /* Aqui foi feita a distancia que deve ser do topo - heigth da top-bar */
-      margin-top: calc(88px - 54px);
+        
       margin-bottom: 0px;
   }
-  .container .post:last-child{
-      margin-bottom: 0;
+  
+  .post:last-child{
+   margin-bottom: 0;
   }
   input{
     width: 215px;
@@ -249,5 +298,90 @@ ion-icon {
   }
 }
 @media (min-width: 935px)   {
+    .top-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #fff;
+        width: 100vw;
+    }
+    .top-container .topo{
+        width: 935px;
+    }
+   
+    .container
+    {   width: 935px;
+        display: flex;
+        justify-content: space-between;
+
+            
+    }
+    .fixa-side-bar{
+        width: 293px;
+        
+    }
+    .side-bar{
+        display: flex;
+        flex-direction: column;
+        
+
+        position: sticky;
+        top: 54px;
+        left: 0;
+    }
+    .side-bar .user{
+        display: flex;
+        align-items: center;
+        
+        margin-top: 16px;
+    }
+    .side-bar .user .user-name div{
+        margin: 8px 0;
+
+        font-size: 14px;
+    }
+    .side-bar .user .avatar{
+        margin: auto 8px auto 0;
+    }
+
+    .inicio-sugeridos{
+
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+
+        font-size: 14px;
+    }
+
+    .sugerido{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sugerido a{
+        color: #0095f6;
+    }
     
+    .left-top{
+        margin-left: 0;
+    }
+    .right-top{
+        margin-right: 0;
+    }
+    .right-top .div-incon ion-icon :last-child{
+        margin-right: 0;
+    }
+
+    .sobre{
+        font-size: 11px;
+        color: #8e8e8e;
+    }
+    .sobre p{
+        margin: 16px 0;
+    }
 }
