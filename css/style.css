@@ -1,5 +1,6 @@
 body {
     background: #fafafa;
+    font-family: 'Roboto', sans-serif;
 }
 
 strong {
@@ -452,7 +453,6 @@ position: relative;
 
     .fixa-side-bar {
         width: 293px;
-
     }
 
     .side-bar {
@@ -461,8 +461,8 @@ position: relative;
 
 
         position: sticky;
-        top: 54px;
-        left: 0;
+        top: 88px;
+       
     }
 
     .side-bar .user {
